@@ -24,3 +24,14 @@ class Solution:
                 return False
             left, right = left + 1, right - 1
         return True
+
+    #doesn't work on long strings
+    def recurPalindrome(self, s: str) -> :
+        ns = re.sub(r'[\W_]', '', s).lower()
+        if len(s) == 1 or len(ns) <= 1:
+            return True
+        if len(ns) == 2:
+            return ns[0] == ns[1]
+        if len(s) >= 3 and ns[0] == ns[-1]:
+            return self.isPalindrome(ns[1: -1])
+        return False
