@@ -1,5 +1,6 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
+        #fibonacci sequence/numbers
         p1,p2 = 1,0
 
         for i in range(n):
