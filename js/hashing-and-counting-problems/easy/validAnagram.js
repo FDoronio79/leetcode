@@ -42,7 +42,7 @@ const validAnagram = (s, t) => {
   return true
 };
 
-const s = "a";
+const s = "aaaabbbbeeeccooosdddd";
 const t = "abb";
 
 console.log(validAnagram(s, t));
