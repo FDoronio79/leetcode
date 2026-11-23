@@ -1,0 +1,26 @@
+{
+  // Turn off AI "ghost text" completions (GitHub Copilot and similar)
+  "editor.inlineSuggest.enabled": false,
+  "github.copilot.enable": {
+    "*": false
+  },
+  "github.copilot.editor.enableAutoCompletions": false,
+  "github.copilot.nextEditSuggestions.enabled": false,
+
+  // Turn off the IntelliSense popup while typing
+  "editor.quickSuggestions": {
+    "other": "off",
+    "comments": "off",
+    "strings": "off"
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.wordBasedSuggestions": "off",
+  "editor.parameterHints.enabled": false,
+  "editor.acceptSuggestionOnEnter": "off",
+
+  // Format with Prettier on save (Cmd+S) for languages Prettier supports
+  "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc][css][html][markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  }
+}
