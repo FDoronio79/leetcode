@@ -52,6 +52,12 @@ const containsDuplicate = (nums) => {
   return false;
 };
 
+// Because we are looking for duplicates, we can use Set() which only takes in unique properties
+// iterate over the nums array
+// check if the set has the number
+// if it does then return true
+// else add the number to the set
+// default return false
 const containsDupev2 = (nums) => {
   const tmp = new Set();
   for (const num of nums) {
