@@ -48,7 +48,7 @@ const twoSum = (nums, target) => {
 };
 
 const twoSumHashMap = (nums, target) => {
-  const numMap = {};
+  const numsObj = {};
   for (let i = 0; i < nums.length; i++) {
     const match = target - nums[i];
     if (match in numMap) {
@@ -58,3 +58,16 @@ const twoSumHashMap = (nums, target) => {
   }
   return [];
 };
+
+const twoSumMap = (nums, target) => {
+  const numsChecker = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    const currNum = nums[i];
+    const diff = target - currNum
+    if (numsChecker.has(diff)) {
+      return [numsChecker.get(nums[i]), i];
+    }
+      numsChecker.set(nums[i], i);
+  }
+  return [];
+}
