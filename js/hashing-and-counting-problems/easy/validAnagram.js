@@ -33,13 +33,35 @@ const validAnagram = (s, t) => {
   if (s.length !== t.length) return false;
 
   const count = {};
-  for (const char of s) count[ch] = (count[ch] || 0) +1;
+  for (const char of s) count[ch] = (count[ch] || 0) + 1;
 
   for (const char of t) {
-      if (!count[char]) return false;
-      count[char]--;  
+    if (!count[char]) return false;
+    count[char]--;
   }
-  return true
+  return true;
+};
+
+const isAnagram = (s, t) => {
+  // check if both strings are the same length, if not return flase;
+  // get a count of each letter in string s in a Map
+  // iterate through string t
+  // if letter is in the s Map decrement the letter's value
+  // check if there are any non 0 values left
+  if (s.length !== t.length) return false;
+  const sCount = new Map();
+  for (const char of s) {
+    sCount.set(char, (sCount.get(char) ?? 0) + 1);
+  }
+  for (const char of t) {
+    if (!sCount.get(char)) {
+      return false;
+    }
+
+    sCount.set(char, sCount.get(char) - 1);
+  }
+
+  return true;
 };
 
 const s = "aaaabbbbeeeccooosdddd";
