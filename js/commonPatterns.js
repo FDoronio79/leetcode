@@ -7,7 +7,7 @@ for (const x of items) {
 // Grouping
 const groups = new Map();
 for (const item of items) {
-  const key = /* what makes items belong together? */;
+  const key = 0/* what makes items belong together? */;
   if (!groups.has(key)) groups.set(key, []);
   groups.get(key).push(item);
 }
